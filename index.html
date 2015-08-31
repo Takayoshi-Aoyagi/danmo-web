@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ダンモ | 埼玉県北本市 ジャズ喫茶 洋風居酒屋 ライブ ジャムセッション</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="shortcut icon" href="">
+    <style>
+      .sched_list {
+      list-style:none;
+      list-style-type :none;
+      padding:5px 10px;
+      border-bottom:1px solid #84b2e0;
+      }
+    </style>
+  </head>
+  <body ng-app="app">
+    <div id="main">
+      <div id="header">
+	<h1>ダンモ</h1>
+	<h2>ジャズ喫茶・居酒屋 ジャムセッション ジャズライブ</h2>
+      </div>
+
+      <div id="body">
+	<div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+	  <div data-role="collapsible" data-collapsed="false">
+	    <h3>スケジュール</h3>
+	    <div ng-controller="ScheduleController as ctrl">
+	      <ul>
+		<li class="sched_list" ng-repeat="sched in ctrl.sched_list">
+		  <div><span>{{sched.date}}</span><span>{{sched.time}}</span></div>
+		  <div>{{sched.name}}</div>
+		  <div>{{sched.desc}}</div>
+		  <div>￥{{sched.charge | number:0}}</div>
+		</li>
+	      </ul>
+	    </div>
+	  </div>
+
+	  <div data-role="collapsible" data-collapsed="true">
+	    <h3>店舗情報</h3>
+	    <ul>
+	      <li><strong>店名</strong><span>ダンモ</span></li>
+	      <li class="arrow"><strong>住所</strong><span><a href="http://maps.google.com/maps?q=埼玉県北本市本町1丁目69-1" target="_blank">埼玉県北本市本町1丁目69-1</a></span></li>
+              <li><strong>最寄駅</strong><span>JR高崎線 北本駅</span></li>
+              <li><strong>道順</strong><span>北本駅西口徒歩五分</span></li>
+              <li class="arrow"><strong>電話</strong><span><a href="tel:048-593-2309">048-593-2309</a></span></li>
+	      <li><strong>営業時間</strong><span>11:00～22:00</span></li>
+	      <li><strong>クレジット</strong><span>利用不可<br /></span></li>
+	    </ul>
+	  </div>
+	</div>
+      </div>
+
+      <div id="footer">
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
