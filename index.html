@@ -9,20 +9,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="shortcut icon" href="">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
     <style>
+      .header {
+      color:white;
+      background-image:url('img/danmo-top.png');
+      padding: 3px;
+      }
+
       .sched_list {
       list-style:none;
       list-style-type :none;
       padding:5px 10px;
       border-bottom:1px solid #84b2e0;
       }
+      
     </style>
   </head>
   <body ng-app="app">
     <div id="main">
-      <div id="header">
+      <div id="header" class="header">
 	<h1>ダンモ</h1>
-	<h2>ジャズ喫茶・居酒屋 ジャムセッション ジャズライブ</h2>
+	<h4>埼玉県北本市のジャズ屋</h4>
+	<h4>喫茶 居酒屋 ジャムセッション ライブ</h4>
+	</div>
       </div>
 
       <div id="body">
@@ -31,11 +43,11 @@
 	    <h3>スケジュール</h3>
 	    <div ng-controller="ScheduleController as ctrl">
 	      <ul>
-		<li class="sched_list" ng-repeat="sched in ctrl.sched_list">
+		<li class="sched_list" ng-repeat="sched in ctrl.sched_list" ng-cloak>
 		  <div><span>{{sched.date}}</span><span>{{sched.time}}</span></div>
 		  <div>{{sched.name}}</div>
 		  <div>{{sched.desc}}</div>
-		  <div>￥{{sched.charge | number:0}}</div>
+		  <div align="right">￥{{sched.charge | number:0}}</div>
 		</li>
 	      </ul>
 	    </div>
@@ -43,15 +55,15 @@
 
 	  <div data-role="collapsible" data-collapsed="true">
 	    <h3>店舗情報</h3>
-	    <ul>
-	      <li><strong>店名</strong><span>ダンモ</span></li>
-	      <li class="arrow"><strong>住所</strong><span><a href="http://maps.google.com/maps?q=埼玉県北本市本町1丁目69-1" target="_blank">埼玉県北本市本町1丁目69-1</a></span></li>
-              <li><strong>最寄駅</strong><span>JR高崎線 北本駅</span></li>
-              <li><strong>道順</strong><span>北本駅西口徒歩五分</span></li>
-              <li class="arrow"><strong>電話</strong><span><a href="tel:048-593-2309">048-593-2309</a></span></li>
-	      <li><strong>営業時間</strong><span>11:00～22:00</span></li>
-	      <li><strong>クレジット</strong><span>利用不可<br /></span></li>
-	    </ul>
+	    <table>
+	      <tr><td><strong>店名</strong></td><td><span>ダンモ</span></td></tr>
+	      <tr><td class="arrow"><strong>住所</strong></td><td><span><a href="http://maps.google.com/maps?q=埼玉県北本市本町1丁目69-1" target="_blank">埼玉県北本市本町1丁目69-1</a></span></td></tr>
+              <tr><td><strong>最寄駅</strong></td><td><span>JR高崎線 北本駅</span></td></tr>
+              <tr><td><strong>道順</strong></td><td><span>北本駅西口徒歩五分</span></td></tr>
+              <tr><td class="arrow"><strong>電話</strong></td><td><span><a href="tel:048-593-2309">048-593-2309</a></span></td></tr>
+	      <tr><td><strong>営業時間</strong></td><td><span>11:00～22:00</span></td></tr>
+	      <tr><td><strong>クレジット</strong></td><td><span>利用不可<br /></span></td></tr>
+	    </table>
 	  </div>
 	</div>
       </div>
@@ -60,9 +72,6 @@
       </div>
     </div>
 
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
