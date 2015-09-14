@@ -26,7 +26,7 @@ angular.module('app', []).controller('ScheduleController', function() {
 	    date: "9/26(土)",
 	    time: "19:00-22:00",
 	    name: "ジャムセッション",
-	    desc: "",
+	    desc: "Pf)菊谷拓也　Ba)本間幸夫",
 	    charge: 1000
 	},
 	{
