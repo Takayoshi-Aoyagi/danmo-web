@@ -19,7 +19,7 @@ angular.module('app', []).controller('ScheduleController', function() {
 	    date: "9/20(日)",
 	    time: "14:00-17:00",
 	    name: "ジャムセッション",
-	    desc: "",
+	    desc: "Pf)安ヵ川真理　Ba)本間幸夫",
 	    charge: 1300
 	},
 	{
