@@ -35,6 +35,13 @@ angular.module('app', []).controller('ScheduleController', function () {
 	    name: "ジャムセッション",
 	    desc: "Pf)安ヵ川真理　Ba)本間幸夫",
 	    charge: 1300
+	},
+	{
+	    date: "11/21(土)",
+	    time: "19:00-22:00",
+	    name: "ダンモライブ",
+	    desc: "Gt)須之内文典　Gt)桜井和樹　Ba)畑中利文",
+	    charge: 1000
 	}
     ];
 });
