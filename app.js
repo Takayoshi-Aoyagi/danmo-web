@@ -40,8 +40,8 @@ angular.module('app', []).controller('ScheduleController', function () {
 	    date: "12/20(日)",
 	    time: "14:00-17:00",
 	    name: "ジャムセッション",
-	    desc: "Pf)安ヵ川真理　Ba)本間幸夫",
-	    charge: 1300
+	    desc: "Pf)菊谷拓也　Ba)本間幸夫",
+	    charge: 1000
 	},
 	{
 	    date: "12/27(日)",
